@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
         if(Input.GetMouseButtonUp(0))
         {
             isHolding = false;
-            knife.OnMouseButtonUp();
+            StartCoroutine(knife.OnMouseButtonUp());
         }
     }
     public bool GetHoldingState() => isHolding;

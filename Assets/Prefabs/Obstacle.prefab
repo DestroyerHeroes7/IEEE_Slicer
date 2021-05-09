@@ -306,6 +306,9 @@ MonoBehaviour:
   - {fileID: 5522975408251897879}
   detectionCollider: {fileID: 5522975408562394864}
   explodeRigidbody: {fileID: 5522975409055354622}
+  meshRenderer:
+  - {fileID: 5522975408451341104}
+  - {fileID: 5522975408251897875}
 --- !u!1 &5522975409055354621
 GameObject:
   m_ObjectHideFlags: 0

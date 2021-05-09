@@ -6,7 +6,13 @@ public class Obstacle : MonoBehaviour
 {
     public List<GameObject> parts;
     public BoxCollider detectionCollider;
-    public Rigidbody explodeRigidbody;
+
+    public List<MeshRenderer> meshRenderer;
+    private void Start()
+    {
+        Color color = RandomColor();
+        meshRenderer.ForEach(x => x.material.color = color);
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("Sharp"))
@@ -22,5 +28,9 @@ public class Obstacle : MonoBehaviour
                 r.AddRelativeTorque(Vector3.right, ForceMode.Impulse);
             });
         }
+    }
+    public Color RandomColor()
+    {
+        return new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
     }
 }

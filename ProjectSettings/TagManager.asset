@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sharp
+  - Ground
   layers:
   - Default
   - TransparentFX
